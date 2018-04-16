@@ -1,0 +1,11 @@
+h1, h2 {
+  color: DarkGreen;
+}
+
+h3 {
+  color: SeaGreen;
+}
+
+html {
+  font-family: Helvetica, sans-serif;
+}
