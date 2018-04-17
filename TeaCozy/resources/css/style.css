@@ -6,6 +6,13 @@ body {
   opacity: 0.9;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .header {
   display: flex;
   flex-direction: row;
@@ -17,6 +24,7 @@ body {
   z-index: 5;
   width: 100%;
   border-bottom: 1px solid seashell;
+  position: fixed;
 }
 
 .logo {
@@ -38,8 +46,13 @@ body {
   margin: 20px;
 }
 
+.header a {
+  color: seashell !important;
+}
+
 .mission {
   display: flex;
+  max-width: 1200px;
   flex-direction: column;
   height: 700px;
   justify-content: center;
@@ -53,4 +66,86 @@ body {
   text-align: center;
   background-color: black;
   width: 1200px;
+}
+
+.FT {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 1000px;
+}
+
+.FT img {
+  height: 200px;
+  width: 300px;
+  margin-bottom: 10px;
+}
+
+.FT .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-image-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.bottom-image-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.image {
+  margin: 20px;
+}
+
+.locations {
+  height: 500px;
+  max-width: 1200px;
+  background-image: url(https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-4/img-locations-background.jpg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.locations .text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-left: 35px;
+}
+
+.town {
+  width: 300px;
+  margin-right: 40px;
+  margin-top: 15px;
+  background-color: black;
+  opacity: 1;
+  text-align: center;
+  color: seashell;
+}
+
+.contact {
+  height: 200;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  color: seashell;
+}
+
+.footer {
+  text-align: left;
+  margin-left: 20px;
 }
