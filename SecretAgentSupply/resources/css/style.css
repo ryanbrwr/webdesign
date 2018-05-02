@@ -1,0 +1,48 @@
+html {
+  font-size: 18px;
+  font-family: helvetica;
+}
+.background {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: black;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 960px;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  background-color: black;
+  color: white;
+  align-items: center;
+}
+
+.header .logo {
+  margin-left: 0.5rem;
+}
+
+.header .title {
+  margin-left: 1rem;
+  margin-top: .66rem;
+  margin-bottom: .66rem;
+}
+
+.header img {
+  height: 1.5rem;
+}
+
+.new-arrival .text {
+  display: flex;
+  width: 20rem;
+  padding-left: 2rem;
+  color: white;
+}
+
+.new-arrival h5 {
+  margin-top: 2rem;
+}
