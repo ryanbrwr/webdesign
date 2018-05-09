@@ -1,72 +1,244 @@
+/* Universal Styles */
+
 html {
-  font-family: Helvetica;
+  font-family: "Helvetica", sans-serif;
   font-size: 18px;
-  line-height: 1.2;
+  background-color: white;
 }
+
+body {
+  line-height: 1.4;
+}
+
 .container {
+  max-width: 960px;
+  margin: auto;
+}
+
+.flex {
   display: flex;
-  flex-direction: column;
-  width: 100%;
+}
+
+/* Header */
+
+header {
+  height: 30rem;
+  padding-top: 1rem;
+  background-image: url("https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-5/tortoiseshell-optics/resources/images/glasses-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+nav {
+  display: flex;
   align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  background-color: cadetblue;
+  color: white;
+}
+
+nav div {
+  display: flex;
+  align-items: center;
+}
+
+nav img {
+  height: 1.5rem;
+  margin-left: 2rem;
+  margin-right: 1rem;
+}
+
+nav ul {
+  margin-right: 1rem;
+}
+
+nav li {
+  display: inline;
+  padding: 0 1rem;
+}
+
+.truncated-menu {
+  display: none;
+}
+
+header .flex {
+  justify-content: flex-end;
+}
+
+.main-banner {
+  display: inline-block;
+  padding: 1.5rem 5rem;
+  margin-top: 10rem;
+  margin-right: -2rem;
+  background-color: white;
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 1.2;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 1024px) {
+  header {
+    height: 22rem;
+    padding-top: 0;
+  }
+
+  nav.container {
+    max-width: 100%;
+  }
+
+  .main-banner {
+    padding: 0.75rem 4rem;
+    margin-top: 5rem;
+    margin-right: 2rem;
+  }
+
+  .main-banner h1 {
+    font-size: 1.33rem;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .menu ul {
+    display: none;
+  }
+
+  .menu ul.truncated-menu {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  header div span {
+    display: none;
+  }
+
+  header {
+    background-position: 20%;
+    height: 17rem;
+  }
+
+  .main-banner {
+    width: 100%;
+    padding: 0 1rem;
+    margin: 9rem auto 0 auto;
+    text-align: center;
+  }
+
+  .main-banner h1 {
+    font-size: 1rem;
+  }
+}
+
+/* Supporting Sections */
+
+.supporting {
+  display: flex;
   justify-content: center;
 }
 
-.header {
+@media only screen and (max-width: 560px) {
+  .supporting {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 3rem;
+  }
+}
+
+/* Service Section */
+
+.service {
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-direction: column;
   justify-content: space-between;
-  background-color: cadetblue;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  color: white;
-  width: 960px;
-  z-index: 5;
-  top: 0;
+  align-items: center;
+  width: 5rem;
+  height: 8rem;
+  margin: 3rem;
+  text-align: center;
+}
+
+.service img {
+  width: 5rem;
+  margin-bottom: 1rem;
+}
+
+.service img.paper-icon {
+  width: 3.5rem;
+}
+
+@media only screen and (max-width: 560px) {
+  .service {
+    height: auto;
+    margin: .77rem;
+    font-size: .77rem;
+  }
+}
+
+/* Info Section */
+
+.info {
+  width: 35%;
+  margin-right: 5%;
+  margin-bottom: 4rem;
+}
+
+.info p {
+  padding: 1rem 0;
 }
 
 .title {
-  margin-left: 2rem;
-  flex-direction: row;
+  max-width: 10rem;
+  padding: 0.5rem 1.25rem;
+  background-color: cadetblue;
+  font-weight: bold;
+  color: white;
+}
+
+@media only screen and (max-width: 560px) {
+  .info {
+    width: 100%;
+  }
+
+  .info .title {
+    width: 100%;
+    max-width: none;
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .info p {
+    padding: 1rem;
+    font-size: .77rem;
+  }
+}
+
+/* Footer */
+
+footer {
   display: flex;
-  justify-content: center;
   align-items: center;
+  background-color: azure;
+  padding: 4rem 2rem;
 }
 
-.title img {
-  margin-right: 1rem;
+footer img {
   height: 1.5rem;
-}
-.header ul {
-  list-style-type: none;
-  display: flex;
-  flex-direction: row;
-}
-
-.header li {
   margin-left: 2rem;
-  margin-right: 2rem;
+  margin-right: 1rem;
 }
 
-.motto {
-  background-color: white;
-  padding-left: 5rem;
-  padding-right: 5rem;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-  font-size: 2rem;
-  line-height: 1.2;
-  z-index: 5;
-}
+@media only screen and (max-width: 560px) {
+  footer {
+    justify-content: center;
+  }
 
-.bg img{
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 30rem;
-}
-
-.bg {
-  height: 30rem;
+  footer div {
+    display: none;
+  }
 }
